@@ -1,9 +1,12 @@
 // Write your Pizza Builder JavaScript in this file.
 $(document).ready(function(){
   $(".btn").removeClass("active");
+  $("aside ul li:nth-child(4)").css("display", "none");
+  $("aside ul li:nth-child(5)").css("display", "none");
   //$(".green-pepper").hide();
   //$(".mushroom").hide();
   //$(".pep").hide();
+  $
   $(".crust").removeClass("crust-gluten-free");
   $(".sauce").removeClass("sauce-white")
 })
@@ -30,10 +33,18 @@ var btnSauce= $(".btn-sauce");
 btnSauce.click(function(){
   $(".sauce").toggleClass("sauce-white");
   btnSauce.toggleClass("active");
+  if(btnSauce.hasClass("active")){
+    $("aside ul li:nth-child(4)").css("display", "");
+  }else  $("aside ul li:nth-child(4)").css("display", "none");
+ 
 })
 
 var btnCrust = $(".btn-crust");
 btnCrust.click(function(){
   $(".crust").toggleClass("crust-gluten-free");
   btnCrust.toggleClass("active");
+  if( btnCrust.hasClass("active")){
+    $("aside ul li:nth-child(5)").css("display", "");
+  }else 
+  $("aside ul li:nth-child(5)").css("display", "none");
 })
